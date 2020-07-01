@@ -18763,6 +18763,34 @@
   },
   "CodeGuru Profiler": {
     "actions": {
+      "AddNotificationChannels": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to add up to 2 topic ARNs of existing AWS SNS topics to publish notifications",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_AddNotificationChannels.html"
+        }
+      },
+      "BatchGetFrameMetricData": {
+        "aws_action_groups": [
+          "ListOnly",
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "List",
+        "condition_keys": [],
+        "description": "Grants permission to get the frame metric data for a Profiling Group",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_BatchGetFrameMetricData.html"
+        }
+      },
       "ConfigureAgent": {
         "aws_action_groups": [
           "ReadWrite"
@@ -18816,20 +18844,6 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_DescribeProfilingGroup.html"
         }
       },
-      "GetFindingsReport": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "Grants permission to get a recommendations report",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetFindingsReport.html"
-        }
-      },
       "GetFindingsReportAccountSummary": {
         "aws_action_groups": [
           "ReadOnly",
@@ -18842,6 +18856,20 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetFindingsReportAccountSummary.html"
+        }
+      },
+      "GetNotificationConfiguration": {
+        "aws_action_groups": [
+          "ReadOnly",
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Read",
+        "condition_keys": [],
+        "description": "Grants permission to get the notification configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_GetNotificationConfiguration.html"
         }
       },
       "GetPolicy": {
@@ -18894,7 +18922,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list the available recommendations reports for a specific profiling group",
+        "description": "Grants permission to list the available recommendations reports for a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18909,7 +18937,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list the start times of the available aggregated profiles for a specific profiling group",
+        "description": "Grants permission to list the start times of the available aggregated profiles for a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18924,7 +18952,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permissions to list profiling groups in the account",
+        "description": "Grants permission to list profiling groups in the account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18937,7 +18965,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permissions to submit a profile collected by an agent belonging to a specific profiling group for aggregation",
+        "description": "Grants permission to submit a profile collected by an agent belonging to a specific profiling group for aggregation",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -18950,11 +18978,24 @@
         ],
         "calculated_action_group": "Permissions",
         "condition_keys": [],
-        "description": "Grants permissions to update the list of principals allowed for an action group in the resource policy associated with the specified Profiling Group.",
+        "description": "Grants permission to update the list of principals allowed for an action group in the resource policy associated with the specified Profiling Group.",
         "docs": {
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_PutPermission.html"
+        }
+      },
+      "RemoveNotificationChannel": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to delete an already configured SNStopic arn from the notification configuration",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_RemoveNotificationChannel.html"
         }
       },
       "RemovePermission": {
@@ -18970,13 +19011,26 @@
           "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_RemovePermission.html"
         }
       },
+      "SubmitFeedback": {
+        "aws_action_groups": [
+          "ReadWrite"
+        ],
+        "calculated_action_group": "Write",
+        "condition_keys": [],
+        "description": "Grants permission to submit user feedback for useful or non useful anomaly",
+        "docs": {
+          "api_doc": "",
+          "doc_page": "",
+          "doc_page_rel": "https://docs.aws.amazon.com/codeguru/latest/profiler-api/API_SubmitFeedback.html"
+        }
+      },
       "UpdateProfilingGroup": {
         "aws_action_groups": [
           "ReadWrite"
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permissions to update a specific profiling group",
+        "description": "Grants permission to update a specific profiling group",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -24222,34 +24276,6 @@
           "api_doc": "",
           "doc_page": "",
           "doc_page_rel": "https://docs.aws.amazon.com/config/latest/APIReference/API_GetResourceConfigHistory.html"
-        }
-      },
-      "GetResources": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
-        }
-      },
-      "GetTagKeys": {
-        "aws_action_groups": [
-          "ReadOnly",
-          "ReadWrite"
-        ],
-        "calculated_action_group": "Read",
-        "condition_keys": [],
-        "description": "",
-        "docs": {
-          "api_doc": "",
-          "doc_page": "",
-          "doc_page_rel": ""
         }
       },
       "ListAggregateDiscoveredResources": {
@@ -61044,7 +61070,7 @@
         "condition_keys": [
           "iotsitewise:childAssetId"
         ],
-        "description": "Associate child assets to the parent via specified model hiearchy.",
+        "description": "Grants permission to associate a child asset to a parent asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61057,7 +61083,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to associate assets to a specified project.",
+        "description": "Grants permission to associate assets to a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61070,7 +61096,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to disassociate assets from a specified project.",
+        "description": "Grants permission to disassociate assets from a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61086,7 +61112,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Puts batch of property values for the specified properties.",
+        "description": "Grants permission to put property values for asset properties",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61100,9 +61126,11 @@
         "calculated_action_group": "Permissions",
         "condition_keys": [
           "aws:RequestTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "iotsitewise:portal",
+          "iotsitewise:project"
         ],
-        "description": "Grants permission to create access policy for a specified portal or a project.",
+        "description": "Grants permission to create an access policy for a portal or a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61118,7 +61146,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates an asset.",
+        "description": "Grants permission to create an asset from an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61134,7 +61162,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates an asset model.",
+        "description": "Grants permission to create an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61150,7 +61178,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a dashboard within a specified project.",
+        "description": "Grants permission to create a dashboard in a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61166,7 +61194,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Creates a gateway.",
+        "description": "Grants permission to create a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61182,7 +61210,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a portal.",
+        "description": "Grants permission to create a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61198,7 +61226,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to create a project within a specified portal.",
+        "description": "Grants permission to create a project in a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61214,7 +61242,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to delete a specified access policy.",
+        "description": "Grants permission to delete an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61227,7 +61255,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified asset.",
+        "description": "Grants permission to delete an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61240,7 +61268,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified asset model.",
+        "description": "Grants permission to delete an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61255,7 +61283,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to delete a specified dashboard.",
+        "description": "Grants permission to delete a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61268,7 +61296,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Deletes the specified gateway.",
+        "description": "Grants permission to delete a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61281,7 +61309,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a specified portal.",
+        "description": "Grants permission to delete a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61294,7 +61322,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to delete a specified project.",
+        "description": "Grants permission to delete a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61310,7 +61338,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to describe a specified access policy.",
+        "description": "Grants permission to describe an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61326,7 +61354,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Describes the specified asset.",
+        "description": "Grants permission to describe an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61340,7 +61368,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified asset model.",
+        "description": "Grants permission to describe an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61356,7 +61384,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Describes the specified asset property.",
+        "description": "Grants permission to describe an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61372,7 +61400,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to describe a specified dashboard.",
+        "description": "Grants permission to describe a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61386,7 +61414,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the gateway for the account.",
+        "description": "Grants permission to describe a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61400,7 +61428,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the specified gateway capability configuration.",
+        "description": "Grants permission to describe a capability configuration for a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61414,7 +61442,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Describes the logging options for the account.",
+        "description": "Grants permission to describe logging options for the AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61428,7 +61456,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe a specified portal.",
+        "description": "Grants permission to describe a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61442,7 +61470,7 @@
         ],
         "calculated_action_group": "Read",
         "condition_keys": [],
-        "description": "Grants permission to describe a specified project.",
+        "description": "Grants permission to describe a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61455,7 +61483,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Disassociate child assets from the parent for specified model hiearchy.",
+        "description": "Grants permission to disassociate a child asset from a parent asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61472,7 +61500,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the aggregated property values for the specified property.",
+        "description": "Grants permission to retrieve computed aggregates for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61489,7 +61517,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the latest property value for the specified property.",
+        "description": "Grants permission to retrieve the latest value for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61506,7 +61534,7 @@
           "iotsitewise:assetHierarchyPath",
           "iotsitewise:propertyId"
         ],
-        "description": "Fetches the property value history for the specified property.",
+        "description": "Grants permission to retrieve the value history for an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61524,7 +61552,7 @@
           "iotsitewise:project",
           "iotsitewise:user"
         ],
-        "description": "Grants permission to list access policies for a specified portal or a project.",
+        "description": "Grants permission to list all access policies for an identity or a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61539,7 +61567,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the asset models for the account.",
+        "description": "Grants permission to list all asset models",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61554,7 +61582,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the assets for the account.",
+        "description": "Grants permission to list all assets",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61571,7 +61599,7 @@
         "condition_keys": [
           "iotsitewise:assetHierarchyPath"
         ],
-        "description": "Lists the assets associated to the parent via specified model hiearchy.",
+        "description": "Grants permission to list all assets associated to an asset by a hierarchy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61586,7 +61614,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list dashboards within a specified project.",
+        "description": "Grants permission to list all dashboards in a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61601,7 +61629,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Lists the gateways for the account.",
+        "description": "Grants permission to list all gateways",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61616,7 +61644,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list portals in the account.",
+        "description": "Grants permission to list all portals",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61631,7 +61659,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list assets associated with a specified project.",
+        "description": "Grants permission to list all assets associated with a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61646,7 +61674,7 @@
         ],
         "calculated_action_group": "List",
         "condition_keys": [],
-        "description": "Grants permission to list projects within a specified portal.",
+        "description": "Grants permission to list all projects in a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61662,7 +61690,7 @@
         "condition_keys": [
           "aws:ResourceTag/${TagKey}"
         ],
-        "description": "Grants permission to lists tag for a resource.",
+        "description": "Grants permission to list all tags for a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61675,7 +61703,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Sets the logging options.",
+        "description": "Grants permission to set logging options for the AWS account",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61692,7 +61720,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:TagKeys"
         ],
-        "description": "Grants permission to tag a resource.",
+        "description": "Grants permission to tag a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61708,7 +61736,7 @@
         "condition_keys": [
           "aws:TagKeys"
         ],
-        "description": "Grants permission to untag a resource.",
+        "description": "Grants permission to untag a resource",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61724,7 +61752,7 @@
           "iotsitewise:portal",
           "iotsitewise:project"
         ],
-        "description": "Grants permission to update a specified access policy.",
+        "description": "Grants permission to update an access policy",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61737,7 +61765,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset.",
+        "description": "Grants permission to update an asset",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61750,7 +61778,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset model.",
+        "description": "Grants permission to update an asset model",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61763,7 +61791,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified asset property.",
+        "description": "Grants permission to update an asset property",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61778,7 +61806,7 @@
         "condition_keys": [
           "iotsitewise:project"
         ],
-        "description": "Grants permission to update a specified dashboard.",
+        "description": "Grants permission to update a dashboard",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61791,7 +61819,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified gateway.",
+        "description": "Grants permission to update a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61804,7 +61832,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Updates the specified gateway capability configuration.",
+        "description": "Grants permission to update a capability configuration for a gateway",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61817,7 +61845,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update a specified portal.",
+        "description": "Grants permission to update a portal",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61830,7 +61858,7 @@
         ],
         "calculated_action_group": "Write",
         "condition_keys": [],
-        "description": "Grants permission to update a specified project.",
+        "description": "Grants permission to update a project",
         "docs": {
           "api_doc": "",
           "doc_page": "",
@@ -61838,17 +61866,17 @@
         }
       }
     },
-    "arn_format": "arn:aws:iotsitewise:<region>:<account_ID>:<type>/<name>",
+    "arn_format": "arn:aws:iotsitewise:<region>:<account-id>:<type>/<id>",
     "arn_regex": "^arn:${Partition}:iotsitewise:.+-\\d+:\\d{12}:.+",
     "description": "AWS IoT SiteWise",
     "docs": {
       "actions_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/",
       "api_detail_root": "",
       "api_doc_root": "",
-      "api_reference_doc_page": "",
-      "authz_doc_page": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/",
+      "api_reference_doc_page": "${DocHomeURL}iot-sitewise/latest/APIReference/",
+      "authz_doc_page": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security-iam.html",
       "concepts_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/",
-      "context_keys_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/"
+      "context_keys_doc_root": "https://docs.aws.amazon.com/iot-sitewise/latest/userguide/security_iam_service-with-iam.html#"
     },
     "prefix": "iotsitewise"
   },
